@@ -11,9 +11,12 @@
   @yield('asset')
 </head>
 <body>
-  @include('layouts.partials.header')
-  @yield('maincontent')
-  @include('layouts.partials.footer')
+  <div class="main-wrapper">
 
+    @include('layouts.partials.header')
+    @yield('maincontent')
+    @include('layouts.partials.footer')
+    
+  </div>
 </body>
 </html>
