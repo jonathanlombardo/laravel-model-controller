@@ -8,11 +8,14 @@ use Illuminate\Http\Request;
 
 class MovieController extends Controller
 {
-  public function index()
+  public function index(Request $request)
   {
-    $movies = Movie::select('id', 'title', 'vote')->get();
-    // dd($movies);
-    return view('movie.index', compact('movies'));
+    $searchedTerm = $request->input('search') ?? '';
+    $movies = Movie::select('id', 'title', 'vote')->where('title', 'LIKE', "%$searchedTerm%")->get();
+
+    // if()
+    // dd($searchedTerm);
+    return view('movie.index', compact('movies', 'searchedTerm'));
   }
 
   public function show(Movie $movie)

@@ -2,10 +2,23 @@
 
 @section('title', 'List')
 
+@section('asset')
+@vite('resources/scss/movie/index.scss')
+@endsection
+
 @section('maincontent')
 <main>
   <div class="container">
     <h1 class="text-center my-3">Movies</h1>
+
+    <form method="GET">
+        <input name="search" type="text" class="form-control" placeholder="Search" value="{{$searchedTerm}}">
+      <div class="btn-wrapper d-flex align-items-center gap-2">
+        <button class="btn btn-outline-primary">Search</button>
+        <a href="{{ route('movie.index') }}">clear</a>
+      </div>
+    </form>
+
     <div class="row row-cols-5 g-5 my-3">
 
       @forelse($movies as $movie)
