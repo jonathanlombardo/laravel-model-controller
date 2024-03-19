@@ -1,5 +1,7 @@
 @extends('layouts.main')
 
+@section('title', $movie->title)
+
 @section('maincontent')
 <main>
   <div class="container text-center">
