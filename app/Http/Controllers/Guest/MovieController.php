@@ -13,8 +13,6 @@ class MovieController extends Controller
     $searchedTerm = $request->input('search') ?? '';
     $movies = Movie::select('id', 'title', 'vote')->where('title', 'LIKE', "%$searchedTerm%")->get();
 
-    // if()
-    // dd($searchedTerm);
     return view('movie.index', compact('movies', 'searchedTerm'));
   }
 
