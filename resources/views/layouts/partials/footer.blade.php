@@ -8,6 +8,6 @@
         <li><a href="#">Link</a></li>
       </ul>
     </nav>
-    <span>NewProject footer</span>
+    <span>{{env('APP_NAME')}} footer</span>
   </div>
 </footer>
