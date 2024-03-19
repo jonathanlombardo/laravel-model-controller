@@ -3,9 +3,7 @@
 
     <nav>
       <ul class="">
-        <li><a href="#">Link</a></li>
-        <li><a href="#">Link</a></li>
-        <li><a href="#">Link</a></li>
+        <li><a href="{{ route('movie.index') }}">Movies</a></li>
       </ul>
     </nav>
     <span>{{env('APP_NAME')}} footer</span>

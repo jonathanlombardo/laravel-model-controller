@@ -4,9 +4,7 @@
     <span>{{env('APP_NAME')}} Header</span>
     <nav>
       <ul class="d-flex align-items-center gap-3">
-        <li><a href="#">Link</a></li>
-        <li><a href="#">Link</a></li>
-        <li><a href="#">Link</a></li>
+        <li><a href="{{ route('movie.index') }}">Movies</a></li>
       </ul>
     </nav>
   </div>
